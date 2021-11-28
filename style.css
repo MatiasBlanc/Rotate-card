@@ -69,6 +69,7 @@ body {
 }
 
 .data__text {
+    font-size: 20px;
     text-align: center;
     margin: 5px;
     color: var(--color--white);
@@ -78,7 +79,7 @@ body {
 }
 
 .card__btn {
-    margin: 0px 155px;
+    margin: 100px 155px;
     padding: 12px 55px;
     background: var(--color--btn);
     color: var(--color--white);
