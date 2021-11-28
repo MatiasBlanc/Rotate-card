@@ -1,0 +1,92 @@
+:root {
+    --color--white: #eee;
+    --color--background--card: #1e214b;
+    --color--btn: #1988FF;
+    --color--black: #141414;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cards__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    transition-duration: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+   transform: rotateY(180deg);
+}
+
+.frontal-card, .back-card {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.frontal-card__img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Start back card */
+.back-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color--background--card);
+    transform: rotateY(180deg);
+}
+
+.back-card__title {
+    width: 80%;
+    margin: 25px auto;
+    text-align: center;
+    color: var(--color--white);
+    font-size: 28px;
+    font-weight: 600;
+    cursor: default;
+}
+
+.data__text {
+    text-align: center;
+    margin: 5px;
+    color: var(--color--white);
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card__btn {
+    margin: 0px 155px;
+    padding: 12px 55px;
+    background: var(--color--btn);
+    color: var(--color--white);
+    font-size: 22px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.6s;
+}
